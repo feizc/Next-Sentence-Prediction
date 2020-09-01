@@ -8,7 +8,7 @@ import numpy as np
 bert_model = transformers.BertModel.from_pretrained('./bert-base-chinese')
 tokenizer = transformers.BertTokenizer.from_pretrained('./bert-base-chinese')
 
-# json文件存放地址, 生成结果也会存放在对应的目录下面 /txt, /vec
+# json文件存放地址: ./data/data, 生成结果也会存放在对应的目录下面 ./data/txt, ./data/vec
 path = './data'
 
 # 将向量文件归并到一个文件，方便训练。
@@ -28,10 +28,10 @@ def merger_vec(path='./data'):
 
 print('begin embedding...')
 # 使用bert将句子进行编码
-# sentence_embedding(bert_model, tokenizer, path)
+sentence_embedding(bert_model, tokenizer, path)
 
 # 将向量文件归并到一个文件，方便模型的训练。
-merger_vec('./data')
+# merger_vec('./data')
 print('merge success!')
 
 
