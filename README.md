@@ -4,3 +4,5 @@ This project is the re-implementation of paper: [Toward Better Storylines with S
 Requirement: Pytorch 1.5 and huggingface bert-base-chinese. 
 
 Predict the next chinese sentence with MLP or BERT. 
+
+We also incorportate FAISS to accelerate searching.
